@@ -179,4 +179,4 @@ Semiconductor-Company-Segmentation-Using-KMeans/
 
 **Balaji Elangovan**
 
-Aspiring Data Scientist
+Machine learning Engineer 
