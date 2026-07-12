@@ -1,37 +1,38 @@
 # Semiconductor Company Segmentation Using K-Means Clustering
 
-## Project Overview
+## Overview
 
-This project applies **K-Means Clustering**, an unsupervised machine learning algorithm, to segment semiconductor companies based on their financial characteristics. By analyzing key financial metrics, the project identifies natural groupings of companies and uncovers hidden patterns that support business analysis and strategic decision-making.
+This project applies **K-Means Clustering**, an unsupervised machine learning technique, to segment semiconductor companies based on their financial performance. By analyzing key financial indicators such as revenue, operating income, operating margin, research and development (R&D) expenditure, and capital expenditure (CAPEX), the project identifies natural groupings of companies and uncovers hidden business patterns.
+
+The analysis follows a complete machine learning workflow, including data exploration, preprocessing, feature transformation, cluster evaluation, and business interpretation.
 
 ---
 
-## Business Objective
+## Business Problem
 
-The objectives of this project are to:
+Semiconductor companies differ significantly in terms of financial performance and investment strategy. Understanding these differences can help investors, analysts, and decision-makers identify companies with similar financial characteristics.
 
-- Segment semiconductor companies into meaningful groups based on their financial performance.
-- Identify hidden patterns among companies using unsupervised learning.
-- Compare the financial characteristics of different company segments.
-- Generate business insights through cluster profiling.
+The objective of this project is to group companies into meaningful segments without using predefined labels.
 
 ---
 
 ## Dataset
 
-**Dataset Used:** `chip_companies_financials.csv`
+**Dataset:** `chip_companies_financials.csv`
 
-### Features
+### Features Used
 
-- Revenue (USD Billion)
-- Operating Margin (%)
-- Operating Income (USD Billion)
-- R&D Spend (USD Billion)
-- Capital Expenditure (USD Billion)
+| Feature | Description |
+|---------|-------------|
+| Revenue | Annual company revenue (USD Billion) |
+| Operating Margin | Operating profit margin (%) |
+| Operating Income | Annual operating income (USD Billion) |
+| R&D Spend | Research and Development expenditure (USD Billion) |
+| CAPEX | Capital expenditure (USD Billion) |
 
 ---
 
-## Technologies Used
+## Tools and Libraries
 
 - Python
 - Pandas
@@ -43,125 +44,98 @@ The objectives of this project are to:
 
 ---
 
-## Project Workflow
+## Methodology
 
-```
-Business Objective
-        ↓
-Data Loading
-        ↓
-Feature Selection
-        ↓
-Exploratory Data Analysis
-        ↓
-Correlation Analysis
-        ↓
-Log Transformation
-        ↓
-Feature Scaling
-        ↓
-Elbow Method
-        ↓
-Silhouette Score
-        ↓
-K-Means Clustering
-        ↓
-Cluster Profiling
-        ↓
-Business Insights
-        ↓
-Conclusion
-```
+The project was completed using the following workflow:
+
+1. Data Loading
+2. Exploratory Data Analysis (EDA)
+3. Correlation Analysis
+4. Feature Selection
+5. Log Transformation of Skewed Features
+6. Feature Scaling using StandardScaler
+7. Determining the Optimal Number of Clusters
+   - Elbow Method
+   - Silhouette Score
+8. K-Means Clustering
+9. Cluster Profiling
+10. Business Interpretation
 
 ---
 
 ## Exploratory Data Analysis
 
-The following analyses were performed before clustering:
+The dataset was explored to understand the distribution and relationships between financial variables.
 
-- Distribution analysis of financial variables
-- Correlation analysis
+The analysis included:
+
+- Distribution of financial metrics
+- Correlation heatmap
+- Identification of skewed variables
 - Log transformation for highly skewed features
-- Feature scaling using StandardScaler
+- Feature scaling before clustering
 
 ---
 
-## Machine Learning
+## Clustering Model
 
-### Algorithm
+**Algorithm**
 
 - K-Means Clustering
 
-### Cluster Evaluation
+**Cluster Evaluation**
 
 - Elbow Method
 - Silhouette Score
 
-### Optimal Number of Clusters
+**Optimal Number of Clusters**
 
-- K = 2
+- **K = 2**
 
 ---
 
-## Cluster Interpretation
+## Results
 
-The clustering algorithm identified **two distinct groups** of semiconductor companies based on their financial characteristics.
+The model identified two distinct groups of semiconductor companies.
 
 ### Cluster 0
 
-Characteristics:
-
 - Higher revenue
 - Higher operating income
-- Higher R&D expenditure
-- Higher capital expenditure
+- Higher R&D investment
+- Higher CAPEX
 
-Represents larger, well-established semiconductor companies.
+This cluster represents large, established semiconductor companies with significant financial resources and investment capacity.
 
 ### Cluster 1
 
-Characteristics:
-
 - Lower revenue
 - Lower operating income
-- Lower R&D expenditure
-- Lower capital expenditure
+- Lower R&D investment
+- Lower CAPEX
 
-Represents smaller or mid-sized semiconductor companies.
-
----
-
-## Key Findings
-
-- Company size is the primary factor driving segmentation.
-- Larger companies invest significantly more in research and capital expansion.
-- Financial investment patterns clearly distinguish the two clusters.
-- K-Means successfully identified meaningful business segments suitable for competitive benchmarking.
+This cluster represents relatively smaller companies with more limited financial resources.
 
 ---
 
-## Business Applications
+## Key Insights
 
-This project can support:
-
-- Company segmentation
-- Competitive benchmarking
-- Investment research
-- Business strategy
-- Market analysis
-- Industry intelligence
+- Semiconductor companies naturally separate into two financial segments.
+- Revenue, R&D expenditure, and CAPEX are the strongest differentiating features.
+- Larger companies consistently invest more in research and infrastructure.
+- K-Means successfully identified meaningful business segments suitable for strategic analysis.
 
 ---
 
 ## Repository Structure
 
 ```
-Semiconductor-Company-Segmentation-Using-KMeans/
-│
+semiconductor-company-segmentation/
+
 ├── chip_companies_financials.csv
 ├── Semiconductor_Company_Segmentation_Using_KMeans.ipynb
 ├── README.md
-└── images/ (optional)
+└── images/
 ```
 
 ---
@@ -169,9 +143,10 @@ Semiconductor-Company-Segmentation-Using-KMeans/
 ## Future Improvements
 
 - Compare K-Means with Hierarchical Clustering and DBSCAN.
-- Apply Principal Component Analysis (PCA) for cluster visualization.
-- Experiment with additional financial and operational features.
-- Develop an interactive dashboard for cluster exploration.
+- Apply Principal Component Analysis (PCA) for visualization.
+- Build an interactive dashboard.
+- Incorporate additional financial and operational variables.
+- Evaluate cluster stability using alternative validation metrics.
 
 ---
 
@@ -179,4 +154,10 @@ Semiconductor-Company-Segmentation-Using-KMeans/
 
 **Balaji Elangovan**
 
-Machine learning Engineer 
+ Machine Learning Engineer | Data Science Enthusiast
+
+---
+
+## Acknowledgement
+
+This project was developed as part of a machine learning portfolio to demonstrate practical applications of unsupervised learning for business analytics and company segmentation.
