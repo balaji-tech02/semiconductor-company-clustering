@@ -130,10 +130,10 @@ This cluster represents relatively smaller companies with more limited financial
 ## Repository Structure
 
 ```
-semiconductor-company-segmentation/
+semiconductor-company-clustering/
 
-├── chip_companies_financials.csv
-├── Semiconductor_Company_Segmentation_Using_KMeans.ipynb
+├── 01_chip_companies_financials.csv
+├── 02_Semiconductor_Company_Clustering_Using_KMeans.ipynb
 ├── README.md
 └── images/
 ```
