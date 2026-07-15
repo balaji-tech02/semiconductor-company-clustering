@@ -134,8 +134,7 @@ semiconductor-company-clustering/
 
 ├── 01_chip_companies_financials.csv
 ├── 02_Semiconductor_Company_Clustering_Using_KMeans.ipynb
-├── README.md
-└── images/
+└── README.md
 ```
 
 ---
